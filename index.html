@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Ongogo - AI & Data Developer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0F172A; /* Dark navy */
+            color: #F4F4F4; /* Light gray text for contrast */
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #0A1122; /* Darker navy for nav */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #F4F4F4;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #22D3EE; /* Cyan hover */
+        }
+
+        /* Hero Section (Home-specific styling) */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 18px;
+        }
+
+        .download-btn {
+            background-color: #22D3EE; /* Neon cyan accent */
+            color: #0F172A;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #1AB8D1; /* Darker hover */
+        }
+
+        /* General Sections */
+        .section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 50px 20px; /* Match hero padding for consistency */
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: none; /* Hidden by default */
+        }
+
+        .section.active {
+            opacity: 1;
+        }
+
+        .section h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center; /* Center headings like home */
+        }
+
+        .section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left; /* Left-align lists for readability */
+            max-width: 600px; /* Keep lists centered-ish */
+            margin: 0 auto;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar with Reactive Buttons -->
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('highlights')">Highlights</a>
+        <a onclick="showSection('engineering')">Engineering</a>
+        <a onclick="showSection('analytics')">Analytics</a>
+        <a onclick="showSection('visualization')">Visualization</a>
+        <a onclick="showSection('ai-ml')">AI & ML</a>
+        <a onclick="showSection('global-projects')">Global Projects</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <!-- Hero Section (Home) -->
+    <div class="hero section" id="home" style="display: block;">
+        <img src="https://drive.google.com/uc?export=view&id=1QTR0PrRztx4WpQpHa3sc_B9LzxAvM7lM" alt="Jack Ongogo Profile Photo">
+        <h1>Jack Ongogo</h1>
+        <h2>AI & Data Developer | Data Analytics & Visualization | Data Engineering & Automation | Predictive Analytics</h2>
+        <p>
+            I'm Jack Ongogo, a versatile AI & Data Developer with 4+ years of cross-domain experience spanning data engineering, analytics, automation, and predictive modeling. Known for building efficient data pipelines, architecting cloud-based systems, and developing insightful solutions that empower decision-making. Fluent in Python, SQL, and cloud-native tools, with proven expertise across the full data lifecycle—from ingestion and transformation to machine learning deployment.
+        </p>
+        <button class="download-btn" onclick="downloadCV()">Download CV</button>
+    </div>
+
+    <!-- Highlights Section -->
+    <div class="section" id="highlights">
+        <h3>Professional Highlights</h3>
+        <ul>
+            <li>4+ years across data engineering, ML, and analytics, delivering automation solutions that reduce overhead and boost performance.</li>
+            <li>Remote experience with global tech companies like Atlassian and Airbyte.</li>
+            <li>Deep expertise in ETL, APIs, data automation, cloud deployments on AWS and GCP, and turning raw data into strategic intelligence.</li>
+            <li>Certified in Google Cloud Professional Data Engineer, IBM Data Science, Microsoft Power BI, AWS ML Specialty, Advanced SQL, and Airflow.</li>
+            <li>Proven ability to collaborate remotely and on-site, mentoring teams and delivering production-grade results ahead of schedule.</li>
+        </ul>
+    </div>
+
+    <!-- Engineering Section -->
+    <div class="section" id="engineering">
+        <h3>Data Engineering</h3>
+        <ul>
+            <li>Engineered scalable data ingestion pipelines using Airbyte and custom connectors at Airbyte, streamlining multi-source synchronization.</li>
+            <li>Led SQL-based ETL with Airflow and GCP functions, reducing manual workloads by 40%.</li>
+            <li>Architected internal data lake at Atlassian using BigQuery and Python scripts for unified team access.</li>
+            <li>Designed ETL workflows for financial and retail clients at Savanna Analytics using SQLAlchemy and Airflow.</li>
+            <li>Built modular DataOps automation framework with Airflow and Docker, reducing pipeline downtime by 35%.</li>
+            <li>Core competencies: ETL pipeline design, API integrations, schema design, data warehousing (Snowflake, BigQuery), cloud & DevOps (AWS, GCP, Docker, CI/CD).</li>
+        </ul>
+    </div>
+
+    <!-- Analytics Section -->
+    <div class="section" id="analytics">
+        <h3>Data Analytics</h3>
+        <ul>
+            <li>Collaborated with teams to design dashboards visualizing KPIs and metrics at Airbyte.</li>
+            <li>Automated reporting via RESTful APIs at Atlassian, delivering real-time metrics.</li>
+            <li>Created interactive dashboards providing actionable business insights at Savanna Analytics.</li>
+            <li>Migrated legacy processes to automated Python scripts, cutting data processing time by 60%.</li>
+            <li>Standardized SQL data modeling and schema governance, reducing redundancy across departments.</li>
+            <li>Core competencies: Pandas, NumPy, PySpark, data sync automations, workflow orchestration.</li>
+        </ul>
+    </div>
+
+    <!-- Visualization Section -->
+    <div class="section" id="visualization">
+        <h3>Visualization</h3>
+        <ul>
+            <li>Designed dashboards in Looker and Power BI for operational metrics at Airbyte.</li>
+            <li>Created interactive dashboards in Power BI and Streamlit at Savanna Analytics.</li>
+            <li>Integrated SQL-based data warehouse with Power BI for retail analytics, improving decision latency by 50%.</li>
+            <li>Mentored juniors in Python-based visualization best practices.</li>
+            <li>Core competencies: Power BI, Looker, Streamlit, Plotly, Matplotlib, Seaborn.</li>
+        </ul>
+    </div>
+
+    <!-- AI & ML Section -->
+    <div class="section" id="ai-ml">
+        <h3>AI & ML</h3>
+        <ul>
+            <li>Developed and deployed predictive models to forecast product usage trends at Atlassian, improving rollout timing by 25%.</li>
+            <li>Designed Python-based ML model on GCP for predictive sales forecasting with 93% accuracy.</li>
+            <li>Deployed ML models on GCP in freelance projects.</li>
+            <li>Enhanced data observability with Python validation scripts for error detection.</li>
+            <li>Core competencies: scikit-learn, TensorFlow, XGBoost, model evaluation & optimization, predictive analytics.</li>
+        </ul>
+    </div>
+
+    <!-- Global Projects Section -->
+    <div class="section" id="global-projects">
+        <h3>Global Projects</h3>
+        <ul>
+            <li>Freelance: Delivered API-based data integrations, cloud migrations, and predictive analytics for startups and SMEs worldwide.</li>
+            <li>Automated market intelligence systems and built data-driven apps in Streamlit.</li>
+            <li>Remote roles at Atlassian and Airbyte: Cross-functional collaboration on data lakes, models, and automations.</li>
+            <li>On-site at Savanna Analytics in Nairobi: ETL for local clients, mentoring, and process migrations.</li>
+            <li>Selected projects: Predictive sales model, DataOps framework, Power BI platform.</li>
+        </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact">
+        <h3>Contact</h3>
+        <ul>
+            <li>Email: <a href="mailto:jackokothh6@gmail.com">jackokothh6@gmail.com</a></li>
+            <li>Phone: 0719541044</li>
+            <li>Location: Nairobi, Kenya</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/jack-ongogo-735015132/">linkedin.com/in/jack-ongogo-735015132/</a></li>
+            <li>GitHub: <a href="https://github.com/JackDatanerd">github.com/JackDatanerd</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript for reactive buttons: Show/hide sections with fade
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (section.classList.contains('active')) {
+                    section.classList.remove('active');
+                    setTimeout(() => {
+                        section.style.display = 'none';
+                    }, 500); // Match transition duration
+                }
+            });
+
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.style.display = 'block';
+                setTimeout(() => {
+                    activeSection.classList.add('active');
+                }, 10); // Small delay to trigger transition
+            }
+        }
+
+        // Download CV function
+        function downloadCV() {
+            window.location.href = 'https://drive.google.com/uc?export=download&id=1Gi1RE5g8bPReobAAxKlum8m-NUJdWdI3';
+        }
+    </script>
+
+</body>
+</html>
